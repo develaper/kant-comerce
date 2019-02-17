@@ -29,7 +29,7 @@ class BuyMinimumPurchaseGetFreeProductTest < Minitest::Test
 
   def test_exception_if_free_quantity_negative
     assert_raises ArgumentError do
-      BuyMinimumPurchaseGetFreeProduct.new("GR1" ,2 ,"-1")
+      BuyMinimumPurchaseGetFreeProduct.new("GR1" ,2 ,-1)
     end
   end
 
