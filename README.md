@@ -10,5 +10,7 @@
 ### Checking results and running the evaluation use cases
 - The use cases specified in the description of the exercise are already defined in the checkout_test.rb but also they can be "tested" running ruby run.rb in the root of the folder.
 
-### Special consideration
-- Although the pricing rules are applied as expected in all cases I couldn't figure out how should be rounded/treated the total price in the 4th use case where my approach is 0.11 inaccurate.
+### Special consideration ad Improvements
+- Tests can be DRY by adding a setup at the beginning.
+- Pricing rules can be DRY extracting common code into the Super class PricingRule.
+- total and scan could be defined in a more rubystic way.

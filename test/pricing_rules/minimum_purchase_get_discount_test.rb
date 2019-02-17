@@ -20,39 +20,33 @@ class MinimumPurchaseGetDiscountTest < Minitest::Test
     end
   end
 
-  def test_exception_if_discount_percent_not_numeric
+  def test_exception_if_discount_fraction_not_numeric
     assert_raises ArgumentError do
       MinimumPurchaseGetDiscount.new("CF1" ,2 ,"1")
     end
   end
 
-  def test_exception_if_discount_percent_negative
+  def test_exception_if_discount_fraction_negative
     assert_raises ArgumentError do
       MinimumPurchaseGetDiscount.new("CF1" ,2 ,-1)
     end
   end
 
-  def test_exception_if_discount_percent_bigger_than_100
-    assert_raises ArgumentError do
-      MinimumPurchaseGetDiscount.new("CF1" ,2 ,150)
-    end
-  end
-
   def test_no_discount_applyed_when_quantity_is_below
-    rule = MinimumPurchaseGetDiscount.new("CF1" ,2 ,10)
-    total = rule.apply(1, 100)
-    assert_equal 100, total
+    rule = MinimumPurchaseGetDiscount.new("CF1" ,3 ,3)
+    total = rule.apply(1, 11.23)
+    assert_equal 11.23, total
   end
 
   def test_discount_applyed_when_quantity_is_equal_to_minimum_purchase
-    rule = MinimumPurchaseGetDiscount.new("CF1" ,2 ,10)
-    total = rule.apply(2, 100)
-    assert_equal 180, total
+    rule = MinimumPurchaseGetDiscount.new("CF1" ,3 ,3)
+    total = rule.apply(3, 11.23)
+    assert_equal 22.46, total
   end
 
   def test_discount_applyed_when_quantity_is_bigger_than_minimum_purchase
-    rule = MinimumPurchaseGetDiscount.new("CF1" ,2 ,10)
-    total = rule.apply(4, 100)
-    assert_equal 360, total
+    rule = MinimumPurchaseGetDiscount.new("CF1" ,3 ,3)
+    total = rule.apply(6, 11.23)
+    assert_equal 44.92, total
   end
 end

@@ -3,7 +3,6 @@ require "./lib/pricing_rules/pricing_rule"
 class Checkout
   attr_accessor :items, :pricing_rules
   def initialize(pricing_rules=[])
-    @items = Hash.new
     @pricing_rules = pricing_rules
     validate! unless @pricing_rules.empty?
     @items = initialize_pricing_rules
@@ -49,10 +48,10 @@ class Checkout
   end
 
   def initialize_pricing_rules
+    @items = Hash.new
     @pricing_rules.each do |pricing_rule|
       @items[pricing_rule.code] = { "pricing_rule" => pricing_rule }
     end
     @items
   end
-
 end

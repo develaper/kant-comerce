@@ -71,7 +71,7 @@ class ItemTest < Minitest::Test
     #Total price expected: £22.45
     pr1 = BuyMinimumPurchaseGetFreeProduct.new("GR1",2 ,1)
     pr2 = MinimumPurchaseGetDiscount.new("SR1",3 ,10)
-    pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,33)
+    pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,3)
     pricing_rules = [pr1, pr2, pr3]
     co = Checkout.new(pricing_rules)
     item = Item.new("GR1", "Green Tea", 3.11)
@@ -102,7 +102,7 @@ class ItemTest < Minitest::Test
     #Total price expected: £16.61
     pr1 = BuyMinimumPurchaseGetFreeProduct.new("GR1",2 ,1)
     pr2 = MinimumPurchaseGetDiscount.new("SR1",3 ,10)
-    pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,33)
+    pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,3)
     pricing_rules = [pr1, pr2, pr3]
     co = Checkout.new(pricing_rules)
     item = Item.new("GR1", "Green Tea", 3.11)
@@ -120,7 +120,7 @@ class ItemTest < Minitest::Test
     #Total price expected: £30.57
     pr1 = BuyMinimumPurchaseGetFreeProduct.new("GR1",2 ,1)
     pr2 = MinimumPurchaseGetDiscount.new("SR1",3 ,10)
-    pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,33)
+    pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,3)
     pricing_rules = [pr1, pr2, pr3]
     co = Checkout.new(pricing_rules)
     item = Item.new("GR1", "Green Tea", 3.11)

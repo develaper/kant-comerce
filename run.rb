@@ -17,7 +17,7 @@ when 1
   puts "pr1 = BuyMinimumPurchaseGetFreeProduct.new(\"GR1\",2 ,1)"
   pr2 = MinimumPurchaseGetDiscount.new("SR1",3 ,10)
   puts "pr2 = MinimumPurchaseGetDiscount.new(\"SR1\",3 ,10)"
-  pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,33)
+  pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,3)
   puts "pr3 = MinimumPurchaseGetDiscount.new(\"CF1\",3 ,33)"
   pricing_rules = [pr1, pr2, pr3]
   puts "pricing_rules = [pr1, pr2, pr3]"
@@ -63,7 +63,7 @@ when 3
   puts "pr1 = BuyMinimumPurchaseGetFreeProduct.new(\"GR1\",2 ,1)"
   pr2 = MinimumPurchaseGetDiscount.new("SR1",3 ,10)
   puts "pr2 = MinimumPurchaseGetDiscount.new(\"SR1\",3 ,10)"
-  pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,33)
+  pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,3)
   puts "pr3 = MinimumPurchaseGetDiscount.new(\"CF1\",3 ,33)"
   pricing_rules = [pr1, pr2, pr3]
   puts "pricing_rules = [pr1, pr2, pr3]"
@@ -91,7 +91,7 @@ when 4
   puts "pr1 = BuyMinimumPurchaseGetFreeProduct.new(\"GR1\",2 ,1)"
   pr2 = MinimumPurchaseGetDiscount.new("SR1",3 ,10)
   puts "pr2 = MinimumPurchaseGetDiscount.new(\"SR1\",3 ,10)"
-  pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,33)
+  pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,3)
   puts "pr3 = MinimumPurchaseGetDiscount.new(\"CF1\",3 ,33)"
   pricing_rules = [pr1, pr2, pr3]
   puts "pricing_rules = [pr1, pr2, pr3]"
