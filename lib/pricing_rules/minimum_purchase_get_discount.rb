@@ -11,7 +11,7 @@ class MinimumPurchaseGetDiscount < PricingRule
   end
 
   def apply(quantity, product_price)
-    product_price = product_price - ((product_price/100) * discount_percent) if quantity >= @minimun_purchase
+    product_price = (product_price - ((product_price/100) * discount_percent)) if quantity >= @minimun_purchase
     quantity * product_price
   end
 

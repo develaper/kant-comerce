@@ -115,4 +115,23 @@ class ItemTest < Minitest::Test
     assert_equal(16.61, co.total)
   end
 
+  def test_total_applies_pricing_rules_with_multiple_product_various_items_case_4
+    #Basket: GR1,CF1,SR1,CF1,CF1
+    #Total price expected: £30.57
+    pr1 = BuyMinimumPurchaseGetFreeProduct.new("GR1",2 ,1)
+    pr2 = MinimumPurchaseGetDiscount.new("SR1",3 ,10)
+    pr3 = MinimumPurchaseGetDiscount.new("CF1",3 ,33)
+    pricing_rules = [pr1, pr2, pr3]
+    co = Checkout.new(pricing_rules)
+    item = Item.new("GR1", "Green Tea", 3.11)
+    item2 = Item.new("SR1", "Strawberries", 5.00)
+    item3 = Item.new("CF1", "Coffee", 11.23)
+    co.scan(item)
+    co.scan(item3)
+    co.scan(item2)
+    co.scan(item3)
+    co.scan(item3)
+    assert_equal(30.57, co.total)
+  end
+
 end
