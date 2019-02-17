@@ -1,4 +1,6 @@
-class BuyMinimumPurchaseGetFreeProduct
+require "./lib/pricing_rules/pricing_rule"
+
+class BuyMinimumPurchaseGetFreeProduct < PricingRule
   attr_accessor :code, :minimun_purchase, :free_quantity
 
   def initialize(code, minimun_purchase, free_quantity)

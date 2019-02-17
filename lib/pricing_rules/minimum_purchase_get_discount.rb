@@ -1,4 +1,6 @@
-class MinimumPurchaseGetDiscount
+require "./lib/pricing_rules/pricing_rule"
+
+class MinimumPurchaseGetDiscount < PricingRule
   attr_accessor :code, :minimun_purchase, :discount_percent
 
   def initialize(code, minimun_purchase, discount_percent)
