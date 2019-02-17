@@ -2,8 +2,8 @@
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/checkout'
-require './lib/item'
+require './lib/basket/checkout'
+require './lib/basket/item'
 
 class ItemTest < Minitest::Test
   def test_intialize_to_new_checkout
