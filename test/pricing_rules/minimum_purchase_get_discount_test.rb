@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/pricing_rules/minimum_purchase_get_discount'
